@@ -1,0 +1,182 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+:root {
+  --font-size-normal: 2rem;
+  --width-full: 100%;
+
+  --white: rgba(255, 255, 255, 1);
+
+  --blue: rgba(67, 93, 227, 1);
+  --less-light-blue: rgb(187, 193, 243);
+  --light-blue: rgba(231, 234, 255, 1);
+
+  --black: rgba(0, 0, 0, 1);
+  --gray: rgba(114, 114, 114, 1);
+  --less-light-gray: rgba(181, 181, 181, 1);
+  --light-gray: rgba(249, 249, 249, 1);
+
+  --red: rgb(208, 26, 26);
+}
+
+body {
+  font-size: var(--font-size-normal);
+  background-color: var(--black);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--black);
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: var(--white);
+  padding: 3.2rem 4.25rem 0 4.25rem;
+  border-radius: 1.8rem;
+  width: 32rem;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 2.6rem;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  z-index: 2;
+}
+
+.header {
+  font-size: 2rem;
+}
+
+.header__icon {
+  stroke: var(--black);
+  padding: 1.2rem;
+  border-radius: 8px;
+
+  width: 4.8rem;
+  height: 4.8rem;
+
+  transition: all 0.3s;
+}
+
+.header__icon:hover {
+  cursor: pointer;
+  background-color: var(--light-blue);
+  stroke: var(--blue);
+}
+
+.header__span {
+  color: var(--blue);
+}
+
+.list {
+  list-style: none;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--less-light-gray);
+  margin-bottom: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem;
+  overflow: hidden;
+
+  width: var(--width-full);
+  background-color: var(--light-gray);
+  border-radius: 8px;
+
+  position: relative;
+}
+
+.list__item::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: var(--less-light-blue);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  transition: all 0.3s;
+}
+
+.list__item:hover {
+  cursor: pointer;
+}
+
+.list__item:hover::before {
+  width: 100%;
+}
+
+.list__item--active {
+  background-color: var(--blue);
+}
+
+.list__item__span {
+  z-index: 2;
+}
+
+.list__item__span--active {
+  color: var(--white);
+}
+
+.log-out-box {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  position: relative;
+  margin-bottom: 4rem;
+  padding: 1rem;
+}
+
+.log-out-box::before {
+  content: "";
+  width: 0%;
+  height: 10%;
+  background-color: var(--red);
+  border-radius: 8px;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  transition: all 0.3s;
+}
+
+.log-out-box:hover {
+  cursor: pointer;
+}
+
+.log-out-box:hover::before {
+  width: 100%;
+}
