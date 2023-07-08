@@ -17,12 +17,12 @@ body {
   height: 100%;
 
   border: none;
-  background-color: rgba(0, 0, 0, 0.775);
+  background-color: white;
   border-radius: 50%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.173);
   font-size: 20px;
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: 500;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   z-index: 1000;
